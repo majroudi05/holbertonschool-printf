@@ -6,20 +6,20 @@
  **/
 int _printf(const char *format, ...)
 {
-int i;
-int max = 0;
+int i = 0;
+int sum = 0;
 va_list ap;
 va_start(ap, format);
-int (*sp_func)(va_list) = NULL;
-if (format == '\0' || (format[i] == '%' && format[i + 1] != ' '))
+if (format == NULL || (format[i] == '%' && format[i + 1] != ' '))
 return (-1);
-for (i = 0; forma[i] != '\0'; i++)
+for (i = 0; format[i] != '\0'; i++)
 if (format[i] != '%')
 {
-max +=  _putchar(format[i]);
+sum +=  _putchar(format[i]);
 }
 else if (format[i] == '%' && format[i + 1] != '\0')
 {
+int (*sp_func)(va_list) = NULL;
 sp_func = get_specifier(format[i + 1]);
 if (sp_func == NULL)
 {
