@@ -12,7 +12,8 @@ int i;
 int l = 0;
 for(i = 0; str[i]; i++)
 {
-l +=  _putchar(str[i]);
+_putchar(str[i]);
+l++;
 }
 return (l);
 }
