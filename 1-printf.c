@@ -23,13 +23,14 @@ else if (format[i] == '%' && format[i + 1] != '\0')
 sp_func = get_specifier(format[i + 1]);
 if (sp_func == NULL)
 {
-_putchar(format[i]);
-_putchar(format[i + 1]);
+sum += _putchar(format[i]);
+sum += _putchar(format[i + 1]);
 }
 else
 {
 sum += sp_func(ap);
 }
+i++;
 }
 va_end(ap);
 return (sum);
