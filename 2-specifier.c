@@ -13,10 +13,10 @@ specifier_t arry[] = {
 {"%", print_percent},
 {NULL, NULL}
 };
-for ( i = 0; arry[i].specifier;i++)
+for (i = 0; arry[i].specifier; i++)
 {
 if (*arry[i].specifier == c)
 return (arry[i].f);
 }
- return (NULL);
+return (NULL);
 }

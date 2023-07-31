@@ -7,9 +7,9 @@
 #include<stdlib.h>
 typedef struct specifier
 {
-  char *specifier;
-  int (*f)(va_list);
-}specifier_t;
+char *specifier;
+int (*f)(va_list);
+} specifier_t;
 int _printf(const char *format, ...);
 int _putchar(char c);
 int print_char(va_list ap);

@@ -2,7 +2,7 @@
 /**
  *print_string - print string
  *@ap: input  value
- *Rutern: length of the printed string
+ *Return: length of the printed string
  *
  **/
 int print_string(va_list ap)
@@ -14,7 +14,7 @@ if (str == NULL)
 {
 str = "(null)";
 }
-for(i = 0; str[i]; i++)
+for (i = 0; str[i]; i++)
 {
 _putchar(str[i]);
 l++;
