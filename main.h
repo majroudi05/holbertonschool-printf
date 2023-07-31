@@ -12,4 +12,5 @@ typedef struct specifier
 }specifier_t;
 int _printf(const *format, ...);
 int _putchar(char c);
+int print_char(va_list ap);
 #endif
