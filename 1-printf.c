@@ -35,6 +35,7 @@ i++;
 }
 else
 {
+va_end(ap);
 return (-1);
 }
 }
