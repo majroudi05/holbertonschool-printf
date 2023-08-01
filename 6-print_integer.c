@@ -7,14 +7,19 @@
  **/
 int print_integer(va_list ap)
 {
-int num = va_arg(ap, int);
+int var = va_arg(ap, int);
+ unsigned int num;
 char buffer[20];
 int i = 0;
 int l = 0;
-if (num < 0)
+if (var < 0)
 {
 _putchar('-');
-num += -num;
+num = -var;
+}
+else
+{
+num = var;
 }
 do
 {

@@ -13,6 +13,7 @@ va_start(ap, format);
 if (format == NULL || (format[i] == '%' && format[i + 1] != ' '))
 return (-1);
 for (i = 0; format[i] != '\0'; i++)
+{
 if (format[i] != '%')
 {
 sum +=  _putchar(format[i]);
@@ -31,6 +32,11 @@ else
 sum += sp_func(ap);
 }
 i++;
+}
+else
+{
+return (-1);
+}
 }
 va_end(ap);
 return (sum);
