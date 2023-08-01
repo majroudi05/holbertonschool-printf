@@ -30,8 +30,8 @@ sum += _putchar(format[i + 1]);
 else
 {
 sum += sp_func(ap);
-i += 2;
 }
+i++;
 }
 else
 {
