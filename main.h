@@ -16,4 +16,5 @@ int print_char(va_list ap);
 int print_string(va_list ap);
 int print_percent(va_list ap);
 int (*get_specifier(const char c))(va_list ap);
+int print_integer(va_list ap);
 #endif

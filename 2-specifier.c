@@ -11,6 +11,7 @@ specifier_t arry[] = {
 {"c", print_char},
 {"s", print_string},
 {"%", print_percent},
+{"d", print_integer},
 {NULL, NULL}
 };
 for (i = 0; arry[i].specifier; i++)
