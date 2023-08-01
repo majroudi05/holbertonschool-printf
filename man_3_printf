@@ -1,0 +1,53 @@
+NAME
+       printf - formatted output function
+
+SYNOPSIS
+       #include <stdio.h>
+
+       int printf(const char *format, ...);
+
+DESCRIPTION
+       The printf function sends formatted output to the standard output (usually the console). It writes the output under the control of the format string specified by 'format' argument. The format string may contain placeholders for variables to be printed.
+
+       The function is part of the standard C library and is widely used in C and C++ programming languages for producing formatted output.
+
+RETURN VALUE
+       The printf function returns the total number of characters written to the standard output if successful, or a negative value if an error occurs.
+
+FORMAT SPECIFIERS
+       The 'format' string may contain format specifiers that start with the '%' character, which are replaced by the values of corresponding arguments:
+
+       %c   Character (char)
+       %d   Signed integer (int)
+       %u   Unsigned integer (unsigned int)
+       %f   Floating-point number (double)
+       %s   String (const char *)
+       %%   The '%' character itself
+
+       Other flags and width specifiers can be used to control the formatting of the output.
+
+EXAMPLES
+       The following examples demonstrate some common uses of printf:
+
+       1. Printing integers:
+              int num = 42;
+              printf("The value of num is %d\n", num);
+
+       2. Printing strings:
+              const char* message = "Hello, World!";
+              printf("%s\n", message);
+
+WARNINGS
+       - The number of format specifiers in the 'format' string must match the number of arguments provided after the 'format' argument. Mismatching the number of specifiers and arguments can lead to undefined behavior and potential security vulnerabilities.
+
+       - Incorrect use of format specifiers may result in unexpected output or runtime errors.
+
+SEE ALSO
+       fprintf(3), sprintf(3), snprintf(3)
+
+STANDARDS
+       The printf function conforms to the ISO C99 standard.
+
+AUTHORS
+      Mariem and Hakim
+
