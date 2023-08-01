@@ -16,6 +16,7 @@ if (var < 0)
 {
 _putchar('-');
 num = -var;
+l++;
 }
 else
 {
