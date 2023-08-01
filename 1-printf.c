@@ -9,9 +9,12 @@ int _printf(const char *format, ...)
 int i = 0;
 int sum = 0;
 va_list ap;
+int (*sp_func)(va_list);
 va_start(ap, format);
-if (format == NULL || (format[i] == '%' && format[i + 1] != ' '))
+if (format == NULL)
+{
 return (-1);
+}
 for (i = 0; format[i] != '\0'; i++)
 {
 if (format[i] != '%')
@@ -20,18 +23,18 @@ sum +=  _putchar(format[i]);
 }
 else if (format[i] == '%' && format[i + 1] != '\0')
 {
-int (*sp_func)(va_list) = NULL;
-sp_func = get_specifier(format[i + 1]);
+i++;
+sp_func = NULL;
+sp_func = get_specifier(format[i]);
 if (sp_func == NULL)
 {
+sum += _putchar('%');
 sum += _putchar(format[i]);
-sum += _putchar(format[i + 1]);
 }
 else
 {
 sum += sp_func(ap);
 }
-i++;
 }
 else
 {
