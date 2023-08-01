@@ -21,8 +21,7 @@ else
 {
 num = var;
 }
-do
-{
+do {
 buffer[i++] = '0' + (num % 10);
 num /= 10;
 } while (num != 0);

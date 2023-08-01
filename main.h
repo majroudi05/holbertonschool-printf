@@ -5,6 +5,11 @@
 #include<unistd.h>
 #include<limits.h>
 #include<stdlib.h>
+/**
+ *struct specifier - structure of specifier list
+ *@f: the list of function
+ *@specifier: list of format specifier
+ **/
 typedef struct specifier
 {
 char *specifier;
