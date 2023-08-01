@@ -1,4 +1,4 @@
-0#include"main.h"
+#include"main.h"
 /**
  *print_percent - print percent
  *@ap: input value
@@ -8,6 +8,6 @@
 int print_percent(va_list ap)
 {
 (void)ap;
-_putchar(%);
+_putchar('%');
 return (1);
 }
