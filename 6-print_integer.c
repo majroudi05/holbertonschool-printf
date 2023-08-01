@@ -8,7 +8,7 @@
 int print_integer(va_list ap)
 {
 int var = va_arg(ap, int);
- unsigned int num;
+unsigned int num;
 char buffer[20];
 int i = 0;
 int l = 0;
@@ -25,7 +25,7 @@ do
 {
 buffer[i++] = '0' + (num % 10);
 num /= 10;
- }while (num != 0);
+} while (num != 0);
 while (i > 0)
 {
 _putchar(buffer[--i]);

@@ -31,7 +31,7 @@ else
 {
 sum += sp_func(ap);
 }
-i++;
+i += 2;
 }
 else
 {
