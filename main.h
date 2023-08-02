@@ -5,6 +5,7 @@
 #include<unistd.h>
 #include<limits.h>
 #include<stdlib.h>
+#define BUF_SIZE 1024
 /**
  *struct specifier - structure of specifier list
  *@f: the list of function
